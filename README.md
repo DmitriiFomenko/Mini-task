@@ -1,1 +1,1 @@
-Условия заданий в .cs.
+The meaning of tasks in. cs
