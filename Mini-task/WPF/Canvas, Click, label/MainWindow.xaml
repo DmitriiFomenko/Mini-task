@@ -1,0 +1,83 @@
+﻿<Window x:Class=".MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="500">
+    <Grid Background="#FFECD8C1">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="38*"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="55*"/>
+            <RowDefinition Height="17*"/>
+            <RowDefinition Height="257*"/>
+            <RowDefinition Height="29*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="161*"/>
+            <ColumnDefinition Width="79*"/>
+            <ColumnDefinition Width="232*"/>
+            <ColumnDefinition Width="10*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label 
+            Content="Время" 
+            Grid.Column="1" Grid.Row="1"
+            TextOptions.TextFormattingMode="Display" 
+            HorizontalContentAlignment="Center"
+            FontWeight="Bold" />
+
+        <TextBox x:Name="timer" 
+                 Grid.Column="1" Grid.Row="2" 
+                 Text="0,0" 
+                 TextWrapping="Wrap" 
+                 IsReadOnly="True" 
+                 VerticalContentAlignment="Center"
+                 VerticalAlignment="Center"/>
+
+        <Label x:Name="res"
+               Grid.Row="4" Grid.Column="1"
+               Content="" 
+               HorizontalContentAlignment="Center" 
+               VerticalContentAlignment="Center"
+               FontWeight="Bold" FontSize="15"/>
+
+        <ListBox x:Name="times" 
+                 Grid.Row="2" Grid.Column="3" 
+                 Grid.RowSpan="3" />
+
+        <Label 
+            Content="Результаты" 
+            Grid.Column="3" Grid.Row="1"
+            Grid.RowSpan="2"
+            TextOptions.TextFormattingMode="Display" 
+            HorizontalContentAlignment="Center"
+            FontWeight="Bold" Margin="2,2,0,34"/>
+
+        <Canvas x:Name="canva" 
+                Grid.Row="6"
+                Margin="0,3,0,0"
+                Background="#FFEEEEEE"
+                Grid.ColumnSpan="5" Grid.RowSpan="2">
+            <Label x:Name="label1" IsEnabled="False" Content="1" Canvas.Left="10" Canvas.Top="10" Width="25" Height="25" MouseDown="label1_MouseDown" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <Label x:Name="label2" IsEnabled="False" Content="2" Canvas.Left="10" Canvas.Top="156" Width="25" Height="25" MouseDown="label1_MouseDown" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <Label x:Name="label3" IsEnabled="False" Content="3" Canvas.Left="134" Canvas.Top="48" Width="25" Height="25" MouseDown="label1_MouseDown" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <Label x:Name="label4" IsEnabled="False" Content="4" Canvas.Left="329" Canvas.Top="126" Width="25" Height="25" MouseDown="label1_MouseDown" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <Label x:Name="label5" IsEnabled="False" Content="5" Canvas.Left="395" Canvas.Top="48" Width="25" Height="25" MouseDown="label1_MouseDown" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <Label x:Name="label6" IsEnabled="False" Content="6" Canvas.Left="196" Canvas.Top="226" Width="25" Height="25" MouseDown="label1_MouseDown" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        </Canvas>
+
+        <Menu HorizontalAlignment="Left" VerticalAlignment="Top" Height="18" Width="69" Grid.ColumnSpan="2">
+            <MenuItem Header="Command">
+                <MenuItem x:Name="start" Header="Start" Click="MenuItem_Start" ></MenuItem>
+                <MenuItem Header="Exit" Click="MenuItem_Exit" ></MenuItem>
+            </MenuItem>
+        </Menu>
+
+    </Grid>
+</Window>

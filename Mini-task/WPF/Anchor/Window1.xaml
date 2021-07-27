@@ -1,0 +1,25 @@
+﻿<Window x:Class=".Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:"
+        mc:Ignorable="d"
+        Title="Window1" Height="200" Width="400" KeyDown="Window_KeyDown" Closing="Window_Closing" ResizeMode="NoResize">
+    <Grid>
+        <ComboBox x:Name="box1" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="173">
+            <TextBlock>По левому краю</TextBlock>
+            <TextBlock>По центру</TextBlock>
+            <TextBlock>По правому краю</TextBlock>
+        </ComboBox>
+        <ComboBox x:Name="box2" HorizontalAlignment="Right" Margin="0,10,10,0" VerticalAlignment="Top" Width="173">
+            <TextBlock>По верхнему краю</TextBlock>
+            <TextBlock>По центру</TextBlock>
+            <TextBlock>По нижнему краю</TextBlock>
+        </ComboBox>
+        <Button x:Name="b3" Content="Применить" HorizontalAlignment="Right" Margin="10" VerticalAlignment="Bottom" Width="75" Click="b_Click"/>
+        <Button x:Name="b1" Content="Ок" HorizontalAlignment="Right" Margin="0,0,170,10" VerticalAlignment="Bottom" Width="75" Click="b_Click"/>
+        <Button x:Name="b2" Content="Отмена" HorizontalAlignment="Right" Margin="0,0,90,10" VerticalAlignment="Bottom" Width="75" Click="b_Click"/>
+        
+    </Grid>
+</Window>
